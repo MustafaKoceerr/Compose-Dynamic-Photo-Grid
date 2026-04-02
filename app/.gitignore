@@ -1,0 +1,4 @@
+/build
+# Optional, if you generate/keep extra app artifacts
+/*.apk
+/*.aab

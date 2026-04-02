@@ -1,0 +1,91 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# --- Gradle / build outputs ---
+.gradle/
+**/build/
+!src/**/build/
+.gradletasknamecache
+gradle-app.setting
+
+# --- Local machine config ---
+
+# --- Android Studio / IntelliJ / IDEA ---
+.idea/
+*.ipr
+*.iws
+out/
+**/out/
+captures/
+.navigation/
+*.log
+*~
+*.swp
+
+# External/native build
+.externalNativeBuild/
+**/.externalNativeBuild/
+.cxx/
+**/.cxx/
+
+# --- Artifacts ---
+*.apk
+*.aab
+output.json
+
+# --- Profiling / crash dumps ---
+*.hprof
+hs_err_pid*
+replay_pid*
+
+# --- Signing / keystore ---
+*.jks
+*.keystore
+.signing/
+
+# --- Firebase (senin template'e göre) ---
+app/google-services.json
+.firebase/
+.runtimeconfig.json
+**/node_modules/*
+**/.firebaserc
+
+# --- Git merge backups ---
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+# --- Java/Kotlin build artifacts (genelde gereksiz ama dursun) ---
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- Eclipse leftovers (olmazsa da sorun değil) ---
+.project
+.classpath
+.cproject
+.settings/
