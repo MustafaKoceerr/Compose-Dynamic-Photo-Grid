@@ -24,4 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ImageExample"
 include(":app")
+include(":photogrid")
  

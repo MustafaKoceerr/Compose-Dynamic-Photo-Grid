@@ -34,13 +34,35 @@
 
 ## Project Structure
 
-- 🖼️ `EditorImageGrid.kt` — Editor image grid
-- 🗂️ `NotesGridAndCard.kt` — Notes grid and card layout
-- 📦 `Models.kt` — Data models
-- 🧪 `MockData.kt` — Preview mock data
-- 👁️ `EditorPreviews.kt` — Editor preview cases
-- 🧭 `GridPreviews.kt` — Grid preview cases
-- 🚀 `MainActivity.kt` — App entry point
+### `:photogrid` — reusable layout library
+- 📐 `layout/PhotoRowArrangement.kt` — Pure Kotlin row rules (`arrangeRows`, `computeRowSize`), unit tested on the JVM
+- 🧱 `ui/PhotoGrid.kt` — Generic Keep-style grid built from justified rows
+- ↔️ `ui/JustifiedImageRow.kt` — Single-pass custom `Layout`: equal heights, widths by aspect ratio, height caps
+- 🖼️ `ui/EditorImageGrid.kt` — Editor grid (rounded images, rows ≤ 65% of window height)
+- 🗂️ `ui/NotePhotoGrid.kt` — Card grid (newest 6 images, tall rows capped)
+- 📦 `model/PhotoGridImage.kt` — Image model (any Coil model + aspect ratio)
+
+### `:app` — sample app
+- 🚀 `ui/DemoApp.kt` — Notes board and editor permutation tabs; tap a note to open it
+- 🗒️ `ui/notes/` — `NotesStaggeredGrid`, `NoteCard`, responsive `NoteGridCells`
+- ✏️ `ui/editor/` — `NoteEditorScreen`, `EditorGalleryScreen` (centered 600dp column on wide screens)
+- 🧪 `sample/SampleData.kt` — Sample gallery and permutations shared by the app and previews
+- 👁️ `ui/previews/` — Phone and tablet previews
+
+## Responsive Behaviour
+
+| Window | Board columns |
+| --- | --- |
+| Phone portrait (~411dp) | 2 |
+| Phone landscape / tablet portrait (~800–914dp) | 3 |
+| Tablet landscape (1280dp) | 5 |
+
+## Tests
+
+```bash
+./gradlew testDebugUnitTest            # JVM: row arrangement, row sizing, column count
+./gradlew connectedDebugAndroidTest    # Compose UI: layout bounds at 360–1280dp, cards, navigation
+```
 
 ## Tech Stack
 

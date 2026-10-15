@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ImageExample</string>
+    <string name="tab_notes">Notlar</string>
+    <string name="tab_editor">Editör</string>
+    <string name="note_voice_recording">🎵 Ses kaydı</string>
+    <string name="navigate_back">Geri</string>
 </resources>
